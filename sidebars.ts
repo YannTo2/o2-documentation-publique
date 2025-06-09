@@ -74,7 +74,8 @@ const sidebars: SidebarsConfig = {
             'nom-de-domaine/code-transfert/ionos-1and1',
             'nom-de-domaine/code-transfert/o2switch',
             'nom-de-domaine/code-transfert/online',
-            'nom-de-domaine/code-transfert/ovh'
+            'nom-de-domaine/code-transfert/ovh',
+            'nom-de-domaine/code-transfert/wix'
           ],
         },
         'nom-de-domaine/dns/configurer-txt-google-search-console',
