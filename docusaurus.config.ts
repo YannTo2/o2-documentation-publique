@@ -14,6 +14,7 @@ const config: Config = {
   favicon: '/img/misc/favicon-alt.ico',
   url: 'https://faq.o2switch.fr',
   baseUrl: '/',
+  trailingSlash: true,
   organizationName: 'o2switchfr', 
   projectName: 'documentation', 
   onBrokenLinks: 'throw',
