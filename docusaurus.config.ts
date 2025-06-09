@@ -26,9 +26,7 @@ const config: Config = {
   },
   future: {
     experimental_faster: true,
-    v4: {
-      removeLegacyPostBuildHeadAttribute: true,
-    }
+    v4: true,
   },
   presets: [
     [
@@ -73,6 +71,11 @@ const config: Config = {
       typesenseSearchParameters: {},
       contextualSearch: true,
     },
+    /* Not working as of now... 
+    titleFormatter: ({ title, siteConfig }) => {
+      return `${title}`;
+    },
+    */
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
