@@ -18,18 +18,17 @@ Dans un premier temps, connectez-vous sur votre interface client 1&1. Vous pouve
 page](https://login.ionos.fr/). 
 
 <Badge text="1" /> Une fois connecté, vous devez arriver sur la page visible ci-dessous. Sur cette page, cliquez sur
-l'un des liens de `gestion de votre nom de domaine`. Vous trouvez ces liens dans la barre à gauche ou via une des
-options présentées dans les cadres de la page d'accueil.
+`Domaines & SSL`. Si la page affichée est différente, il faut alors cliquer sur le bouton ``Menu`` situé en haut à gauche.
 
 <Image
     src="/img/docs/nom-de-domaine/changer-dns/changer-dns-1and1-1.png"
     title="Gestion des domaines"
-    caption="Sélection du nom de domaine dans l'interface client"
+    caption="Se rendre dans la catégorie « Domaines & SSL »"
     alt="Capture d'écran de l'interface de IONOS"
 />
 
-<Badge text="2" />  Ensuite, il faut cliquer sur le lien de `gestion des noms de domaine` (si vous avez cliqué sur
-l'un des cadres dans l'étape précédente, ce n'est pas nécessaire).
+<Badge text="2" />  Ensuite, une page s'ouvrira et vous fournira une liste de l'ensemble de vos domaines. Il vous suffit alors de cliquer 
+sur le bouton d'action ``...`` au niveau du domaine à transférer, puis sur ``Serveur de noms``.
 
 <Image
     src="/img/docs/nom-de-domaine/changer-dns/changer-serveur-dns-1and1-2.png"
@@ -38,8 +37,7 @@ l'un des cadres dans l'étape précédente, ce n'est pas nécessaire).
     alt="Capture d'écran de l'interface de IONOS"
 />
 
-<Badge text="3" /> Ensuite, il faut cliquer sur le lien `modifier les paramètres DNS`, visible dans l'onglet des `noms
-de domaine`.
+<Badge text="3" /> Ensuite, il faut cliquer sur le bouton `Utiliser des serveurs de noms personnalisés`.
 
 <Image
     src="/img/docs/nom-de-domaine/changer-dns/modifier-serveur-dns-1and1-3.png"
@@ -48,27 +46,17 @@ de domaine`.
     alt="Capture d'écran de l'interface de IONOS"
 />
 
-<Badge text="4" /> Sur l'écran suivant, il faut :
-  * Cocher la case `autres serveurs de noms`
-  * Indiquer `ns1.o2switch.net` en 1er serveur de nom
-  * Choisir `mes serveurs de noms secondaires` dans le menu déroulant
-  * Indiquer `ns2.o2switch.net` en 2ème serveur de nom
-  * Puis valider en cliquant sur le bouton `enregistrer`. Pensez à bien `revalider` en cliquant sur `oui` dans le pop-up qui va s'ouvrir. Une erreur courante est de quitter la page après cela mais il faut bien valider `deux fois`.
+<Badge text="4" /> Sur l'écran suivant, il faut remplir le formulaire par :
+  * Serveur de noms 1 : ``ns1.o2switch.net`` ;
+  * Serveur de noms 2 : ``ns2.o2switch.net`` ;
+  * Puis le valider en cliquant sur le bouton `Enregistrer`.
+
+Un message ``Le serveur de nom a été modifié avec succès`` apparaîtra après avoir cliqué sur ``Enregistrer``. 
 
 <Image
     src="/img/docs/nom-de-domaine/changer-dns/changer-dns-1and1-o2switch-4.png"
     title="Modifier les serveurs DNS"
     caption="Modifications des serveurs DNS chez IONOS pour installer ceux d'o2switch"
-    alt="Capture d'écran de l'interface de IONOS"
-/>
-
-<Badge text="5" /> Si tout se passe bien, un message en vert apparaît puis les DNS sont bien visibles dans le résumé du
-nom de domaine.
-
-<Image
-    src="/img/docs/nom-de-domaine/changer-dns/changer-dns-1and1-fin-5.png"
-    title="Les serveurs DNS sont changés"
-    caption="Les serveurs DNS o2switch ont été installés sur le domaine IONOS"
     alt="Capture d'écran de l'interface de IONOS"
 />
 

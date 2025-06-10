@@ -39,18 +39,17 @@ Dans un premier temps, connectez-vous sur votre interface client 1&1. Vous pouve
 page](https://login.ionos.fr/). 
 
 <Badge text="1" /> Une fois connecté, vous devez arriver sur la page visible ci-dessous. Sur cette page, cliquez sur
-l'un des liens de `gestion de votre nom de domaine`. Vous trouvez ces liens dans la barre à gauche ou via une des
-options présentées dans les cadres de la page d'accueil.
+`Domaines & SSL`. Si la page affichée est différente, il faut alors cliquer sur le bouton ``Menu`` situé en haut à gauche.
 
 <Image
     src="/img/docs/nom-de-domaine/code-transfert/1and1-code-tranfert-authcode-1.png"
-    title="Sélection du nom de domaine dans l'interface de gestion Ionos"
-    caption="Sélection du nom de domaine "
+    title="Se rendre dans la catégorie Domaines & SSL dans l'interface de gestion Ionos"
+    caption="Se rendre dans la catégorie « Domaines & SSL »"
     alt="Capture d'écran de la page d'accueil de Ionos"
 />
 
-<Badge text="2" />  Ensuite, il faut cliquer sur le lien de `gestion des noms de domaine` (si vous avez cliqué sur l'un
-des cadres dans l'étape précédente, ce n'est pas nécessaire).
+<Badge text="2" />  Ensuite, une page s'ouvrira et vous fournira une liste de l'ensemble de vos domaines. Il vous suffit 
+alors de cliquer sur le bouton d'action ``...`` au niveau du domaine à transférer, puis sur ``Transfert et renouvellement``.
 
 <Image
     src="/img/docs/nom-de-domaine/code-transfert/recuperer-authcode-1and1-2.png"
@@ -59,26 +58,29 @@ des cadres dans l'étape précédente, ce n'est pas nécessaire).
     alt="Capture d'écran de l'espace d'administration ionos"
 />
 
-<Badge text="3" /> Sur l'écran suivant, il faut aller dans `transférer/résilier le domaine` visible dans l'onglet `noms
-de domaine` puis cliquer sur `transférer vers un autre prestataire`.
+<Badge text="3" /> Sur l'écran suivant, vous devez décocher la case du ``Verrouillage du nom de domaine``. La page va s'actualiser 
+et le statut va passer en ``En cours d’actualisation`` durant quelques minutes. Vous pouvez l'ignorer et cliquer sur 
+``Afficher le code de d'autorisation``.
 
 <Image
     src="/img/docs/nom-de-domaine/code-transfert/recuprer-code-transfert-1and1-3.png"
-    title="Récupérer le code de transfert chez Ionos"
-    caption="Récupération du code de transfert chez Ionos"
+    title="Débloquer et récupérer le code de transfert d'un domaine chez Ionos"
+    caption="Débloquer et afficher le code de transfert chez Ionos"
     alt="Capture d'écran de la procédure de récupération du code de transfert ionos"
 />
 
-<Badge text="4" /> Sur la page suivante, il faut commencer par débloquer le domaine en cliquant sur le lien
-`déverrouiller` (un message d'avertissement apparaît, il faut l’accepter). 
+<Badge text="4" /> Le code de transfert s'affichera en cliquant sur ``Afficher le code d'autorisation``. Le authcode est sensible à
+la casse, les majuscules/minuscules et caractères spéciaux sont importants.
 
-Le code de transfert apparaît dans la ligne `code d'autorisation`. Le authcode est sensible à la casse, les
-majuscules/minuscules et caractères spéciaux sont importants. 
+Si la case de verrouillage du domaine, précédemment décochée, est à nouveau cochée cela signifie que le transfert n'est pas encore
+possible. Cela peut se produire lorsque le domaine a été acquis / renouvelé récemment.
+
+En attendant de pouvoir lancer le transfert chez o2switch, vous pouvez choisir de [configurer nos serveurs DNS](/nom-de-domaine/changer-dns/ionos-1and1).
 
 <Image
     src="/img/docs/nom-de-domaine/code-transfert/obtenir-code-autorisation-1and1-4.png"
     title="Débloquer et récupérer le code de transfert d'un domaine chez Ionos"
-    caption="Débloquer et récupérer le code de transfert chez Ionos"
+    caption="Récupération du code de transfert chez Ionos"
     alt="Capture d'écran de la procédure de récupération du code de transfert ionos"
 />
 
