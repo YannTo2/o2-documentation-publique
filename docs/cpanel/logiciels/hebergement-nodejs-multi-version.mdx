@@ -551,13 +551,14 @@ d'applications nodeJS.
 
 En cas d'erreurs, la page d'erreur qui s'affiche (dans le navigateur web) ne contient pas beaucoup d'information par
 défaut. Il est possible d'activer le mode de debug avancé de Phusion Passenger, la page d'erreur générée sera beaucoup
-plus complète.
+plus complète, et vous avez également la possibilité de créer votre fichier de log pour les erreurs.
 
 Pour cela, il suffit d'ajouter les lignes suivantes dans le fichier .htaccess à la racine du site internet :
 
 ```apacheconf title=".htaccess"
 PassengerAppEnv development
 PassengerFriendlyErrorPages on
+PassengerAppLogFile "/home/chemin_a_changer/error.log"
 ```
 
 Les erreurs sont également loguées dans l'outil [erreurs](/cpanel/mesures/erreurs-apache) de cPanel.
