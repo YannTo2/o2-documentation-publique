@@ -1,0 +1,144 @@
+---
+title: Modifier le fichier hosts pour tester un site avant migration
+sidebar_label: Modifier le fichier hosts
+description: Découvrez comment modifier le fichier hosts sur Windows, macOS et Linux afin de tester votre site sur un nouvel hébergement.
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+tags:
+  - guides
+  - migration
+---
+
+Lors d’une migration de site web, il est souvent nécessaire de tester le site sur le nouvel hébergement avant de modifier les DNS.
+La modification du fichier hosts permet de visualiser le site hébergé chez o2switch sans impacter le site en production.
+
+- [Modifier le fichier hosts sous **Windows**](/guides/migrations/modifier-fichier-hosts/#modifier-le-fichier-hosts-sous-windows)
+- [Modifier le fichier hosts sous **macOS** et **Linux**](/guides/migrations/modifier-fichier-hosts/#modifier-le-fichier-hosts-sous-macos-et-linux)
+- [**Questions fréquentes** sur la modification du fichier hosts](/guides/migrations/modifier-fichier-hosts/#questions-fréquentes-sur-la-modification-du-fichier-hosts)
+
+## Qu’est-ce que le fichier hosts ?
+
+Le fichier **hosts** permet d’associer manuellement un nom de domaine à une adresse IP sur votre ordinateur, sans modification au niveau DNS.
+
+Cette modification est **locale**, c'est-à-dire qu'elle n’affecte que votre ordinateur et n’a aucun impact sur les visiteurs de votre site, ou sur votre site.
+
+## Pourquoi modifier le fichier hosts lors d’une migration ?
+
+Lors de la migration de votre site web vers un nouvel hébergement, il est recommandé de tester le site avant de modifier les DNS.
+
+Cela vous permet de visualiser votre site sur le nouvel hébergement, vérifier que tout fonctionne (formulaires, back-office), sans couper l'accès à votre site en production.
+
+## Comment fonctionne le fichier hosts ?
+
+Chaque ligne du fichier hosts suit cette structure :
+
+```
+adresse_IP   nom_de_domaine
+```
+
+Exemple :
+
+```
+203.0.113.10   example.com
+```
+
+Une fois la ligne enregistrée, votre ordinateur utilisera cette adresse IP pour accéder au domaine concerné.
+
+## Modifier le fichier hosts sous Windows
+
+### Emplacement du fichier hosts sous Windows
+
+Le fichier hosts se trouve à l’emplacement suivant :
+
+```
+C:\Windows\System32\drivers\etc\hosts
+```
+
+### Étapes pour modifier le fichier hosts sous Windows
+
+1. Ouvrez le **Bloc-notes** en tant qu’administrateur  
+2. Cliquez sur **Fichier > Ouvrir**
+3. Accédez au dossier :
+   ```
+   C:\Windows\System32\drivers\etc\
+   ```
+4. Sélectionnez **Tous les fichiers**
+5. Ouvrez le fichier `hosts`
+6. Ajoutez la ligne suivante en bas du fichier :
+   ```
+   203.0.113.10   example.com
+   ```
+7. Enregistrez puis fermez le fichier
+
+<Image
+    src="/img/docs/guides/migrations/modifier-fichier-hosts-windows.png"
+    title="Modification du fichier hosts sous Windows"
+    caption="Ici nous sommes sur Windows 11, mais la procédure est identique pour 10, 8, 7, etc"
+    alt="Capture d'écran de la modification du fichier hosts sous Windows"
+/>
+
+## Modifier le fichier hosts sous macOS et Linux
+
+### Emplacement du fichier hosts sous macOS et Linux
+
+Sur macOS et Linux, le fichier hosts se trouve au même emplacement :
+
+```
+/etc/hosts
+```
+
+### Étapes pour modifier le fichier hosts sous macOS et Linux
+
+1. Ouvrez un terminal
+2. Exécutez la commande suivante :
+   ```
+   sudo nano /etc/hosts
+   ```
+3. Saisissez votre mot de passe utilisateur
+4. Ajoutez la ligne souhaitée :
+   ```
+   203.0.113.10   example.com
+   ```
+5. Enregistrez avec `Ctrl + O`, puis quittez avec `Ctrl + X`
+
+<Image
+    src="/img/docs/guides/migrations/modifier-fichier-hosts-linux.png"
+    title="Modification du fichier hosts via nano"
+    caption="Ici nous sommes sous Fedora, mais c'est parfaitement identique pour une autre distribution Linux ou macOS"
+    alt="Capture d'écran de la modification du fichier hosts via nano"
+/>
+
+Si vous préférez, vous pouvez utiliser un autre éditeur comme **vim** ou **vi**.
+
+## La modification est-elle immédiate ?
+
+Oui. La modification du fichier hosts est **prise en compte immédiatement**.
+
+Si le site ne s’affiche pas correctement :
+- videz le cache de votre navigateur
+- ou testez en navigation privée **(recommandé)**
+
+## Avertissement SSL lors des tests
+
+Attention : le certificat SSL de votre site actuel ne couvre pas l'hébergement de test. Votre navigateur affichera probablement un avertissement de sécurité, et certaines ressources (images, scripts) pourraient ne pas se charger. C'est normal et temporaire.
+
+## Comment annuler une modification du fichier hosts ?
+
+Pour revenir au comportement normal, supprimez simplement la ligne ajoutée et enregistrez le fichier. Le domaine utilisera alors à nouveau le DNS public.
+
+## Questions fréquentes sur la modification du fichier hosts
+
+### Pourquoi utiliser le fichier hosts plutôt que modifier les DNS ?
+Modifier le fichier hosts permet de tester un site sur un nouvel hébergement **sans impacter les visiteurs**, contrairement à un changement de DNS qui est public.
+
+### Combien de temps dure l’effet d’une modification du fichier hosts ?
+La modification reste active tant que la ligne est présente dans le fichier hosts. Elle peut être supprimée à tout moment.
+
+### Est-ce dangereux de modifier le fichier hosts ?
+Non, à condition de respecter la syntaxe et de supprimer les lignes temporaires après les tests.
+
+### Dois-je redémarrer mon ordinateur après modification ?
+Non. La modification est appliquée immédiatement après l’enregistrement du fichier.
+
+### Puis-je modifier le fichier hosts sur plusieurs domaines ?
+Oui, il est possible d’ajouter plusieurs lignes, une par domaine.
