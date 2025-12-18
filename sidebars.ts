@@ -236,6 +236,7 @@ const sidebars: SidebarsConfig = {
             'guides/migrations/changer-hebergeur',
             'guides/migrations/deplacer-site-hebergement-o2switch',
             'guides/migrations/transferer-site-wordpress-ovh-vers-o2switch',
+            'guides/migrations/modifier-fichier-hosts',
           ],
         },
         {
